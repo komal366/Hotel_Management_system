@@ -1,0 +1,418 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<meta charset="utf-8">
+	<meta name="viewport" content="width=device-width, initial-scale=1">
+	<title>Hotel Website</title>
+	<link rel="stylesheet" type="text/css" href="main.css">
+	<script src="https://kit.fontawesome.com/dbed6b6114.js" crossorigin="anonymous"></script>
+	<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+
+
+</head>
+<body>
+
+	<!-----menu bar----->
+	<div class="book-btn">
+		<button onclick="document.getElementById('id01').style.display='block'" style="width:auto;">Book now</button>
+		<div id="id01" class="modal">
+  
+  <form class="modal-content animate"  method="post">
+    <div class="imgcontainer">
+      <span onclick="document.getElementById('id01').style.display='none'" class="close" title="Close Modal">&times;</span>
+      <img src="./images/bk1.jpg" alt="Avatar" class="avatar" >
+    </div>
+
+    <div class="container">
+      <label for="uname"><b>Username</b></label>
+      <input type="text" placeholder="Enter Username" name="uname" required>
+
+      <label for="psw"><b>E-mail</b></label>
+      <input type="email" placeholder="Enter E-mail" name="email" required>
+
+      <label for="psw"><b>Conatct</b></label>
+      <input type="text" placeholder="Enter Contact Number" name="contact" required>
+        
+      <label for="psw"><b>Address</b></label>
+      <input type="text" placeholder="Enter Address" name="address" required>
+      
+      <label for="psw"><b>Arrival-Date</b></label>
+      <input type="date"  name="Arrival-Date" required>  
+
+      <label for="psw"><b>Departure-Date</b></label>
+      <input type="date"  name="Departure-Date" required>
+
+      <label for="psw"><b>Adults</b></label>
+      <input type="number" placeholder="Adults" name="Adults" required>
+
+      <label for="psw"><b>Kids</b></label>
+      <input type="number" placeholder="Kids" name="Kids" required>
+
+      <label for="psw"><b>Number of Rooms</b></label>
+      <input type="number" placeholder="Number of Rooms" name="room" required>
+
+      <label for="psw"><b>Type of Rooms</b></label>
+       <select id=" roomtype" name="roomtype" >
+            <option value="Choose Room...">Choose Room...</option>
+            <option value="Single Rooms">Single Room</option>
+            <option value="Double Rooms">Double Room</option>
+            <option value="Triple Room">Triple Room</option>
+        </select>
+
+         <label for="psw"><b>Payment</b></label><br>
+     	 <input type="radio" name="payment" required style="margin-top: 10px;"> Check<br>
+     	 <input type="radio" name="payment" required style="margin-top: 8px;"> Paypal<br><br>
+
+
+        <label for="message"><b>Message</b></label>
+          <textarea name="message" id="message" placeholder="Enter Your Any Message" class="form-control" cols="30" rows="5"></textarea>
+
+      <button type="submit" onclick="book()">Book</a></button>
+      <label>
+      	Your registration will be verified prior to your arrival.
+      </label>
+    </div>
+
+    
+  </form>
+</div>
+	</div>
+
+	<div class="logo">
+			<img src="./images/logo.png">		
+	</div>
+
+	<div id="mySidenav" class="sidenav">
+  		<a href="javascript:void(0)" class="closebtn" onclick="closeNav()">&times;</a>
+  		<a href="#">Home</a>
+  		<a href="#">Services</a>
+  		<a href="#">Gallery</a>
+  		<a href="#">Contact Us</a>
+  		<a href="#">About Us</a>
+
+  		<div class="btn-1">
+  			<a href="sign up form.html" class="btn">Sign Up</a>
+  			<a href="login form.html" class="btn">Login</a>	
+  		</div>
+	</div>
+
+	<div id="main"> 
+	  <span  onclick="openNav()">&#9776; Menu</span>
+	</div>
+	<!-----menu bar end----->
+
+	<!----slide show----->
+	<div class="slideshow-container">
+
+		<div class="mySlides fade">
+  		<div class="numbertext">1 / 3</div>
+  				<img src="./images/h1.jpg" style="width:100%">
+  				<div class="text">
+  					<h1>HOTEL BLISS</h1>
+ 			 			NICE AND COMFORTABLE PLACE TO STAY
+ 				</div>
+ 				
+		</div>
+
+			<div class="mySlides fade">
+			  <div class="numbertext">2 / 3</div>
+			  		<img src="./images/h2.jpg" style="width:100%" "height: auto;" >
+			  		<div class="text">
+			  			<h1>HOTEL BLISS</h1>
+			    			Spend Your Holiday
+			    	</div>
+			</div>
+
+			<div class="mySlides fade">
+			  <div class="numbertext">3 / 3</div>
+			  <img src="./images/h3.jpg" style="width:100%"  >
+			  <div class="text">
+			  	<h1>HOTEL BLISS</h1>
+						Meals & Buffets
+					</div>
+			</div>
+
+	</div>
+	<br>
+	<!--slideshow end-->
+
+
+
+	<!----services---->
+	<section class="services sec-width" id="services">
+		<div class="title">
+			<h2>services</h2>
+		</div>
+		<div class="services-container">
+			<!--single services-->
+			<article class="service">
+				<div class="service-icon">
+					<span>
+						<i class="fas fa-utensils"></i>
+					</span>
+				</div>
+				<div class="service-content"> 
+					<h2>Breakfast</h2>
+					<p>
+						 The hotel restaurant with both indoor and outdoor seating offers an open-buffet breakfast and is directly accessible from guestroom corridors.
+					</p>
+					<button type="button" class="btn">Know more</button>
+				</div>
+			</article>
+			<!--end of single services-->
+
+			<!--single services-->
+			<article class="service">
+				<div class="service-icon">
+					<span>
+						<i class="fas fa-car"></i>
+					</span>
+				</div>
+				<div class="service-content"> 
+					<h2>Parking</h2>
+					<p>
+					  Hotel Bliss offers 24-hour indoor parking for its guests.The indoor parking and valet services are free for accommodating hotel guests. Car washing service is also available with an additional cost
+					</p>
+					<button type="button" class="btn">Know more</button>
+				</div>
+			</article>
+			<!--end of single services-->
+			<!--single services-->
+			<article class="service">
+				<div class="service-icon">
+					<span>
+						<i class="fas fa-wifi"></i>	
+					</span>
+				</div>
+				<div class="service-content"> 
+					<h2>Internet Access</h2>
+					<p>
+						Vialand Palace Hotel offers free Internet access. High-speed wireless Internet connection is complimentary both in the rooms and public areas.
+					</p>
+					<button type="button" class="btn">Know more</button>
+				</div>
+			</article>
+			<!--end of single services-->
+			<!--single services-->
+			<article class="service">
+				<div class="service-icon">
+					<span>
+						<i class="fas fa-user-tie"></i>
+					</span>
+				</div>
+				<div class="service-content"> 
+					<h2>Business Centre</h2>
+					<p>
+						 The hotel's business centre is designated to meet all your business travel needs and available to assist you with all office services such as scanning and emailing documents, fax services, photocopying, printing and offices supplies.
+
+ 
+					</p>
+					<button type="button" class="btn">Know more</button>
+				</div>
+			</article>
+			<!--end of single services-->
+		</div>
+	</section>
+<!------services end---->
+
+
+	<!------about section---------->
+	<section class="about" id="about">
+		<h2 class="heading">aboutus</h2>
+		<div class="row">
+			<div class="video-container">
+				<video src="./images/hotel.mp4" loop autoplay muted></video>
+			</div>
+
+			<div class="content">
+				<h3>Asli Taste Restaurant</h3>
+				<p>Asli Taste, one of the best restaurants in Nashik, which is our family restaurant in Nashik, adds to the charm of experiencing our hospitality. The roof top restaurant in Nashik does not merely offer scrumptious foods and an excellent view of the city. It has the right ambience that seldom fails to feed the soul. </p>
+				
+			</div>
+		</div>
+	</section>
+
+<!-------about section end------>
+
+
+<!-----customers------>
+
+<section class="customers" id="customers">
+		<div class="sec-width">
+			<div class="title1">
+				<h2>Customers</h2>
+			</div>
+			<div class="customers-container">
+				<!----single customer--->
+				<div class="customer">
+					<div class="rating">
+						<span><i class="fas fa-star"></i></span>
+						<span><i class="fas fa-star"></i></span>
+						<span><i class="fas fa-star"></i></span>
+						<span><i class="fas fa-star"></i></span>
+						<span><i class="far fa-star"></i></span>
+					</div>
+					<h3>We loved it</h3>
+					<p>sgiugsvjk gwuiysjzsb ureagvz rargwhvszyrtghfvhvCYfv chmvg ity4wafsgvzhdmz wy4tafv yjtfvb nj4twafgv uatyfzsbv</p>
+					<img src="./images/cus.jpg" alt="customer image">
+					<div class="c1"><span>Customer Name, Country</span></div>
+				</div>
+				<!----end of single customer--->
+				<!----single customer--->
+				<div class="customer">
+					<div class="rating">
+						<span><i class="fas fa-star"></i></span>
+						<span><i class="fas fa-star"></i></span>
+						<span><i class="fas fa-star"></i></span>
+						<span><i class="fas fa-star"></i></span>
+						<span><i class="far fa-star"></i></span>
+					</div>
+					<h3>Comfartable Living</h3>
+					<p>sgiugsvjk gwuiysjzsb ureagvz rargwhvszyrtghfvhvCYfv chmvg ity4wafsgvzhdmz wy4tafv yjtfvb nj4twafgv uatyfzsbv</p>
+					<img src="./images/cus1.jpg" alt="customer image">
+						<div class="c1"><span>Customer Name, Country</span></div>
+				</div>
+				<!----end of single customer--->
+				<!----single customer--->
+				<div class="customer">
+					<div class="rating">
+						<span><i class="fas fa-star"></i></span>
+						<span><i class="fas fa-star"></i></span>
+						<span><i class="fas fa-star"></i></span>
+						<span><i class="fas fa-star"></i></span>
+						<span><i class="far fa-star"></i></span>
+					</div>
+					<h3>Nice Place</h3>
+					<p>sgiugsvjk gwuiysjzsb ureagvz rargwhvszyrtghfvhvCYfv chmvg ity4wafsgvzhdmz wy4tafv yjtfvb nj4twafgv uatyfzsbv</p>
+					<img src="./images/cus2.jpg" alt="customer image">
+				<div class="c1"><span>Customer Name, Country</span></div>
+				</div>
+				<!----end of single customer--->
+			</div>
+		</div>
+	</section>
+	<!----services end---->
+
+
+
+<!---footer------>
+	<footer class="footer">
+		<div class="footer-container">
+			<div>
+				<h2>About us</h2>
+				<p>gywgsvkhn  ygearkvfx cm ygrvs,cyrtagfsfksgitwgrk ygrsfbxfkgiugterdhjb eauzdhjbjfrt74yihhg tysruhgvytyfsuhbvghgyuarsu 7y5teuargfzvhv  3q3twayfsVzcnv yq39ta4wzgsvm</p>
+				<ul class="social-icons"> 
+					<li class="flex">
+						<i class="fa fa-twitter fa-2x"></i>
+					</li>
+					<li class="flex">
+						<i class="fa fa-facebook fa-2x"></i>
+					</li>
+					<li class="flex">
+						<i class="fa fa-instagram fa-2x"></i>
+					</li>
+				</ul>
+			</div>
+
+			<div>
+				<h2>Useful Links</h2>
+				<a href="">Blog</a>
+				<a href="">Rooms</a>
+				<a href="">Subscription</a>
+				<a href="">Gift card</a>
+			</div>
+
+			<div>
+				<h2>Privacy</h2>
+				<a href="">Career</a>
+				<a href="">About Us</a>
+				<a href="">Conatct Us</a>
+				<a href="">Services</a>
+			</div>
+
+			<div>
+				<h2>Have A Questions?</h2>
+				<div class="contact-item">
+					<span>
+						<i class="fas fa-map-marker-alt"></i>
+					</span>
+					<span>
+						687 fake st.moutain view ,san francies californio usa
+					</span>
+				</div>
+				<div class="contact-item">
+					<span>
+						<i class="fas fa-phone-alt"></i>
+					</span>
+					<span>
+						46644511546532
+					</span>
+				</div>
+				<div class="contact-item">
+					<span>
+						<i class="fas fa-envelope"></i>
+					</span>
+					<span>
+						bliss123@gmail.com
+					</span>
+				</div>
+			</div>
+
+		</div>
+	</footer>
+	<!---end of footer---->
+
+</body>
+
+<script>
+
+	/*Book Now Form*/
+
+	var modal = document.getElementById('id01');
+	window.onclick = function(event) 
+	{
+    	if (event.target == modal) 
+    	{
+        	modal.style.display = "none";
+    	}
+	}
+
+			/*--menubar--*/
+				function openNav() {
+				  document.getElementById("mySidenav").style.width = "250px";
+				  document.getElementById("main").style.marginLeft = "250px";
+				}
+
+				function closeNav() {
+				  document.getElementById("mySidenav").style.width = "0";
+				  document.getElementById("main").style.marginLeft= "0";
+				}
+			/*---menubar end-*/
+
+			/*--slideshow--*/
+			var slideIndex = 0;
+			showSlides();
+
+			function showSlides() {
+			  var i;
+			  var slides = document.getElementsByClassName("mySlides");
+			  for (i = 0; i < slides.length; i++) 
+			  {
+			    slides[i].style.display = "none";  
+			  }
+			  slideIndex++;
+			  if (slideIndex > slides.length) 
+			  {
+			  	slideIndex = 1
+			  }    
+			  slides[slideIndex-1].style.display = "block";  
+			  setTimeout(showSlides, 5000); 
+			}
+			/*--slideshow end--*/
+
+
+			function book(){
+				alert("Your Registration Successfully")
+			}
+</script>
+</html>
